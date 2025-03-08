@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odliczanie od aresztowania D. Mateckiego</title>
+    <title>Wolność dla Mateckiego</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,6 +11,7 @@
             background-color: #f5f5f5;
             margin: 0;
             padding: 20px;
+            color: #333;
         }
         .container {
             max-width: 800px;
@@ -21,7 +22,20 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         h1 {
-            color: #333;
+            color: #d00;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .political-message {
+            background-color: #f8f8f8;
+            border-left: 5px solid #d00;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
+            line-height: 1.5;
+        }
+        .political-message strong {
+            color: #d00;
         }
         .counter {
             display: flex;
@@ -46,8 +60,9 @@
             margin-top: 5px;
         }
         .info {
-            margin-top: 20px;
+            margin-top: 10px;
             color: #666;
+            font-style: italic;
         }
         .free-matecki {
             color: red;
@@ -63,23 +78,32 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .counter-title {
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Czas od aresztowania</h1>
-        <div class="info">
-            <p>POLITYCZNY WIĘZIEŃ TUSKA!
-Dariusz Matecki został bezprawnie aresztowany 7 marca 2025 roku o godzinie 8:45 przez siepaczów Tuska i Bodnara! To kolejna ofiara reżimu 13 grudnia, który systematycznie niszczy polską demokrację!
-
-Bodnarowcy w czarnych mundurach zatrzymali demokratycznie wybranego posła w drodze do prokuratury, gdzie dobrowolnie miał złożyć wyjaśnienia. SKANDAL! Tak wygląda "praworządność" według ekipy Tuska!
-
-Matecki dołączył do grona WIĘŹNIÓW POLITYCZNYCH tego rządu. Najpierw Kamiński i Wąsik, teraz Matecki - KTO NASTĘPNY? Czy tak ma wyglądać Polska w 2025 roku?
-
-DOMAGAMY SIĘ NATYCHMIASTOWEGO UWOLNIENIA DARIUSZA MATECKIEGO!
-
-Poniżej licznik pokazujący, jak długo trwa to BEZPRAWNE UWIĘZIENIE:</p>
+        <h1>Polityczny Więzień Tuska!</h1>
+        
+        <div class="political-message">
+            <p>Dariusz Matecki został <strong>bezprawnie aresztowany</strong> 7 marca 2025 roku o godzinie 8:45 przez siepaczów Tuska i Bodnara! To kolejna ofiara reżimu 13 grudnia, który systematycznie niszczy polską demokrację!</p>
+            
+            <p>Bodnarowcy w czarnych mundurach zatrzymali demokratycznie wybranego posła w drodze do prokuratury, gdzie dobrowolnie miał złożyć wyjaśnienia. <strong class="uppercase">Skandal!</strong> Tak wygląda "praworządność" według ekipy Tuska!</p>
+            
+            <p>Matecki dołączył do grona <strong class="uppercase">więźniów politycznych</strong> tego rządu. Najpierw Kamiński i Wąsik, teraz Matecki - <strong>KTO NASTĘPNY?</strong> Czy tak ma wyglądać Polska w 2025 roku?</p>
+            
+            <p><strong class="uppercase">Domagamy się natychmiastowego uwolnienia Dariusza Mateckiego!</strong></p>
         </div>
+        
+        <div class="counter-title">Poniżej licznik pokazujący, jak długo trwa to <strong>BEZPRAWNE UWIĘZIENIE</strong>:</div>
+        
         <div class="counter">
             <div class="time-box">
                 <div id="days" class="number">0</div>
@@ -97,6 +121,10 @@ Poniżej licznik pokazujący, jak długo trwa to BEZPRAWNE UWIĘZIENIE:</p>
                 <div id="seconds" class="number">0</div>
                 <div class="label">Sekund</div>
             </div>
+        </div>
+        
+        <div class="info">
+            <p>Dariusz Matecki został aresztowany 7 marca 2025 o godzinie 8:45</p>
         </div>
         
         <div class="free-matecki">
