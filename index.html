@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odliczanie od aresztowania</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .counter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .time-box {
+            margin: 10px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            min-width: 100px;
+        }
+        .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .label {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .info {
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Czas od aresztowania</h1>
+        <div class="info">
+            <p>Dariusz Matecki został aresztowany 7 marca 2025 o godzinie 8:45</p>
+        </div>
+        <div class="counter">
+            <div class="time-box">
+                <div id="days" class="number">0</div>
+                <div class="label">Dni</div>
+            </div>
+            <div class="time-box">
+                <div id="hours" class="number">0</div>
+                <div class="label">Godzin</div>
+            </div>
+            <div class="time-box">
+                <div id="minutes" class="number">0</div>
+                <div class="label">Minut</div>
+            </div>
+            <div class="time-box">
+                <div id="seconds" class="number">0</div>
+                <div class="label">Sekund</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data aresztowania: 7 marca 2025, 8:45
+        const arrestDate = new Date('2025-03-07T08:45:00');
+
+        function updateCounter() {
+            const now = new Date();
+            const diff = now - arrestDate;
+
+            // Obliczanie czasu
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            // Aktualizacja elementów HTML
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        // Aktualizacja co sekundę
+        setInterval(updateCounter, 1000);
+        
+        // Pierwsze uruchomienie
+        updateCounter();
+    </script>
+</body>
+</html>
